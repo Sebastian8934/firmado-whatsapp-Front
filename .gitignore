@@ -3,4 +3,3 @@
 *.pem
 *.rsa
 node_modules
-*/public
