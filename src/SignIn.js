@@ -61,7 +61,7 @@ export default function SignIn() {
   React.useEffect(() => {
     async function getUserData() {
       let cryptrUserData = window.location.search.substring(1).split('=');
-      await axios.post(config.ipMachine + 'message/cryptr', { cryptr: cryptrUserData[1] }).then(
+      await axios.post(config.ipMachine + 'messages/cryptr', { cryptr: cryptrUserData[1] }).then(
         (res) => {
           setUserInfo(res.data.result.userDecryptr);
         }
