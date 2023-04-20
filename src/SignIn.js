@@ -99,7 +99,7 @@ export default function SignIn() {
     })
     event.preventDefault();
     if (isDigital) {
-      axios.post(config.ipMachine + 'signature/', {
+      axios.post(config.ipMachine + 'signatures/', {
         isDigital: isDigital,
         numeroDocumento: dNumber,
         clave: password,
@@ -128,7 +128,7 @@ export default function SignIn() {
         })
       });
     } else {
-      await axios.post(config.ipMachine + 'signature/', {
+      await axios.post(config.ipMachine + 'signatures/', {
         isDigital: isDigital,
         dni: userInfo.dni,
         base64: base64
